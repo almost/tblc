@@ -102,7 +102,7 @@ class MainFrame(wx.Frame):
         # begin wxGlade: MainFrame.__set_properties
         self.SetTitle("WxPython Tiny Pic Bootloader")
         _icon = wx.EmptyIcon()
-        _icon.CopyFromBitmap(wx.Bitmap("/usr/share/tinybldLin/_tinybldLin/images/blue.ico", wx.BITMAP_TYPE_ANY))
+        _icon.CopyFromBitmap(wx.Bitmap("images/blue.ico", wx.BITMAP_TYPE_ANY))
         self.SetIcon(_icon)
         self.SetSize((728, 411))
         self.SetFont(wx.Font(9, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, ""))

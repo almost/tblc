@@ -14,7 +14,7 @@ def TransferHex(WxTbl):
        
     pic_mem, eeprom_mem, config_mem = chunkhexfile.chunkhexfile(WxTbl,hexfile)
     
-    type,max_flash,family=detectpic.CheckPic(WxTbl) 
+    type,max_flash,family=detectpic.CheckPic(WxTbl)
     
     if max_flash==None:
         WxTbl.timer.Start(2000)
@@ -53,6 +53,12 @@ def TransferHex(WxTbl):
         
         maxpos=max_flash-100+4
         minpos=0
+
+        ###############################
+        for i in range(8):
+            adr = 2*(max_flash-100)+i
+            pic_mem[adr] = pic_mem.get(i,0xFF)
+        ###############################
         
         pic_mem[0]=0x8A
         pic_mem[1]=0x15
