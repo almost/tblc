@@ -1,10 +1,13 @@
 #!/usr/bin/python
 """
-Tiny boot loader linux command line version
+Tiny PIC Boot Loader Command Line Tool
 
-Based on the code from tinybldlin.sf.net
+Based (very heavily) on the code by ferezvi@gmail.com from
+tinybldlin.sf.net
 
 tom@almsotobsolete.net
+
+For Felix's Machines http://felixsmachines.com/
 """
 
 import serial,wx
@@ -439,4 +442,7 @@ def Write_default_config(port, baud, family):
     return True
 
 if (__name__ == '__main__'):
-    TransferHex(*sys.argv[1:])
+    try:
+        TransferHex(*sys.argv[1:])
+    except:
+        print "tblc.py <hexfile> [port] [baud]"

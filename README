@@ -1,0 +1,19 @@
+Tiny PIC Boot Loader Command Line Tool
+======================================
+
+Thomas Parslow
+tom@almsotobsolete.net
+
+Based (very heavily) on the code by ferezvi (ferezvi@gmail.com) from
+http://tinybldlin.sf.net, I've basically just cut and pasted then
+removed all the GUI code that was scatter throughout. I've also fixed
+a bug that stopped it working with 16Fxx chips.
+
+This works with the Tiny PIC Bootloader from
+http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm It
+provides the PC part and it works from the command line in Linux
+(probably Windows and OSX too, but I haven't tested it). It may or may
+not work for you, I just I needed something I could stick in my
+Makefile.
+
+For Felix's Machines http://felixsmachines.com/
